@@ -114,6 +114,7 @@ const exitAndLogError = (errorMsg) => {
 
 const readJsonFile = (filepath) => {
   try {
+    console.info(JSON.parse(fs.readFileSync(filepath, 'utf8')));
     return JSON.parse(fs.readFileSync(filepath, 'utf8'));
   } catch (e) {
     console.log(e);
